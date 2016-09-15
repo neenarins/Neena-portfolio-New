@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>employers dummy </title>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-12">
+				<div class="panel panel-primary">
+						<div class="panel-heading">
+							
+						</div>
+						<div class="panel-body">
+
+
+							<form >
+								<div class="form-group">
+									<h4 class=""><strong>Name</strong></h4>
+									<input type="text" class="form-control " id="name"  />
+
+									<h4 class=""><strong>Username</strong></h4>
+									<input type="text" class="form-control " id="username"  />
+
+									<h4 class=""><strong>Password</strong></h4>
+									<input type="text" class="form-control " id="password"  />
+
+									<h4 class=""><strong>Retype Password</strong></h4>
+									<input type="text" class="form-control " id="retypePassword"  />
+
+									<h4 class=""><strong>Company Name</strong></h4>
+									<input type="text" class="form-control " id = "companyName"  />
+
+									<h4 class=""><strong>Company Website</strong></h4>
+									<input type="text" class="form-control " id = "companyWebsite"  />
+
+									<h4 class=""><strong>Company Location</strong></h4>
+									<input type="text" class="form-control " id = "companyLocation"  />
+								
+									<h4 class=""><strong>Employer ID for testing posted jobs</strong></h4>
+									<input type="text" class="form-control " id = "employerID"  />
+								
+
+								</div>
+
+								
+								
+							</form>
+							<div class="pull-right">
+									<button type="button" class="btn btn-danger" id="submit"><h4>Submit</h4></button>
+								</div>
+						
+							<div class="pull-right">
+									<button type="button" class="btn btn-primary" id="jobstest"><h4>jobs test</h4></button>
+								</div>
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script type = "text/javascript">
+
+var currentURL = window.location.origin;
+
+function postdata(){
+
+	var name = $('#name').val().trim();
+	var username = $('#username').val().trim();
+	var password = $('#password').val().trim();
+	var retypePassword = $('#retypePassword').val().trim();
+	var companyName = $('#companyName').val().trim();
+	var companyWebsite = $('#companyWebsite').val().trim();
+	var companyLocation = $('#companyLocation').val().trim();
+
+	var obj = {
+		name:name,
+		username:username,
+		password:password,
+		retypePassword:retypePassword,
+		companyName:companyName,
+		companyWebsite:companyWebsite,
+		companyLocation:companyLocation
+
+	}
+	
+
+	$.post(currentURL + "/employerspost" , obj);
+		
+		
+		
+	
+
+
+
+}
+
+function getJobs(){
+
+	var employerID = $('#employerID').val().trim();
+
+	var obj = {
+		employerID:employerID
+	}
+
+	$.post('/employerjobs',obj,function(result){
+
+		console.log(result);
+	})
+
+
+}
+
+$('#submit').on('click',function(){
+	postdata();
+	console.log('clicked');
+})
+
+$('#jobstest').on('click',function(){
+	getJobs();
+	console.log('clicked 2')
+})
+
+
+
+
+</script>

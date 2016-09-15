@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <title>Meditate With Hangman</title>
+</head>
+   <body  class=backgroundBuddha1>
+    <div class="container backgroundBuddha"  >
+              
+        <div class="page-header">
+            <h1>Hangman <small>- Meditation Style</small></h1>
+        </div>
+      
+        <div id="word">
+            <h2 >
+            Can you guess this word?</h2>           
+            <div class=infoBudha>(It is a meditation word. Guess a letter, and type it on the keyboard)</div>    
+            <div id="gameArea" ></div>
+        </div>
+        <br>
+        <div class="panel panel-success" id="stats">
+            <div class="panel-heading">
+                <h3 class="panel-title">Game Stats</h3>
+            </div>
+            <div class="panel-body">
+                <div class=wrong-guesses-hdr>
+                    <h4><strong>Wrong Guesses: </strong></h4><div id="incorrectGuesses"></div>
+                </div>
+                
+                <div>
+                    <h4><strong>Remaining guesses: </strong></h4><span id="lives"></span>
+                </div>
+                
+                <div class=wins-hdr>
+                    <h4><strong>Wins: </strong></h4><span id="wins"></span>
+                </div>
+                <div>
+                    <h4><strong>Losses: </strong></h4><span id="losses"></span>
+                </div>
+            </div>
+            
+            
+            
+            <br><br><br><br><br><br><br>
+            
+            
+            
+        </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>employer search dummy </title>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-12">
+				<div class="panel panel-primary">
+						<div class="panel-heading">
+							
+						</div>
+						<div class="panel-body">
+
+
+							<form >
+								<div class="form-group">
+									<h4 class=""><strong>Title,Keywords</strong></h4>
+									<input type="text" class="form-control " id="mainSubject"  />
+
+									<h4 class=""><strong>location</strong></h4>
+									<input type="text" class="form-control " id="location"  />
+
+									
+									
+								
+
+								</div>
+
+								
+								
+							</form>
+							<div class="pull-right">
+									<button type="button" class="btn btn-danger" id="submit"><h4>Submit</h4></button>
+								</div>
+						</div>
+					</div>
+
+
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script type = "text/javascript">
+
+var currentURL = window.location.origin;
+
+function postdata(){
+
+	var mainSubject = $('#mainSubject').val().trim();
+	var location = $('#location').val().trim();
+	
+
+	var obj = {
+		mainSubject:mainSubject,
+		location:location
+	}
+	
+
+	$.post(currentURL + "/employersearchquery" , obj,function(data){
+		console.log(data);
+		
+
+
+	});
+		
+		
+		
+	
+
+
+
+}
+
+$('#submit').on('click',function(){
+	postdata();
+	console.log('clicked');
+})
+
+
+
+</script>

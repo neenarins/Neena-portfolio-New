@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/CSS/style.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="assets/javascript/game.js" type="text/javascript"></script>
+	<title>Trivia</title>
+</head>
+<body background="assets/images/catBackground.jpg">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Cat Trivia, Right Meow.</h1>
+			<img src="assets/images/catIcon.ico">
+			<br>
+			<br>
+			<button type="button" class="btn btn-default btn-lg start">Play Game!</button>
+		</div>
+		<div id="main-content">
+			<h3 id="counter">Seconds Remaining: </h3>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">The terms for a group of cats, and a group of kittens, respectively, is: </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q1" value="wrong"> Caggle, Kidden<br>
+			    		<input type="radio" name="q1" value="right"> Clowder, Kindle<br>
+			    		<input type="radio" name="q1" value="wrong"> Coddle, Kodden<br>
+			    		<input type="radio" name="q1" value="wrong"> Cullen, Kilten<br>
+			    	</form>
+			 	</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Cats can be toilet trained. </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q2" value="right"> True<br>
+			    		<input type="radio" name="q2" value="wrong"> False<br>
+			    	</form>
+			 	</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Cats have an aversion to: </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q3" value="wrong"> Sweets<br>
+			    		<input type="radio" name="q3" value="wrong"> Sours<br>
+			    		<input type="radio" name="q3" value="right"> Citrus<br>
+			    		<input type="radio" name="q3" value="wrong"> Salty<br>
+			    	</form>
+			 	</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Fingerprints: Humans, ___: Cats. </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q4" value="wrong"> Thumb<br>
+			    		<input type="radio" name="q4" value="wrong"> Tail<br>
+			    		<input type="radio" name="q4" value="right"> Nose<br>
+			    		<input type="radio" name="q4" value="wrong"> Fur<br>
+			    	</form>
+			 	</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">A cat cannot see, where? </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q5" value="right"> Directly under their nose<br>
+			    		<input type="radio" name="q5" value="wrong"> Peripherals<br>
+			    		<input type="radio" name="q5" value="wrong"> Far Left<br>
+			    		<input type="radio" name="q5" value="wrong"> Far Right<br>
+			    	</form>
+			 	</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">On average, a cat has how many whiskers? </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q6" value="wrong"> 6<br>
+			    		<input type="radio" name="q6" value="wrong"> 12<br>
+			    		<input type="radio" name="q6" value="right"> 24<br>
+			    		<input type="radio" name="q6" value="wrong"> 48<br>
+			    	</form>
+			 	</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">On average, a fully grown cat has how many teeth? </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q7" value="wrong"> 12<br>
+			    		<input type="radio" name="q7" value="wrong"> 24<br>
+			    		<input type="radio" name="q7" value="wrong"> 28<br>
+			    		<input type="radio" name="q7" value="right"> 30<br>
+			    	</form>
+			 	</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Cats learn to manipulate their owners through their meows. </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q8" value="right"> True<br>
+			    		<input type="radio" name="q8" value="wrong"> False<br>
+			    	</form>
+			 	</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">On average, a fully grown cat has how many bones? </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q9" value="wrong"> 108<br>
+			    		<input type="radio" name="q9" value="wrong"> 155<br>
+			    		<input type="radio" name="q9" value="wrong"> 206<br>
+			    		<input type="radio" name="q9" value="right"> 230<br>
+			    	</form>
+			 	</div>
+			</div>
+			<br>
+			<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">The term that refers to cat breeders and shelters is: </h3>
+			  	</div>
+			  	<div class="panel-body">
+			    	<form>
+			    		<input type="radio" name="q1" value="right"> Catteries<br>
+			    		<input type="radio" name="q1" value="wrong"> Kitteries<br>
+			    		<input type="radio" name="q1" value="wrong"> Cat Dens<br>
+			    		<input type="radio" name="q1" value="wrong"> Cat Holdings<br>
+			    	</form>
+			 	</div>
+			</div>
+			<div id="submit">
+				<button type="button" class="btn btn-default btn-lg">Submit!</button>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div id="finish">
+		<div class="panel panel-default">
+  			<div class="panel-heading">
+    			<h3 class="panel-title">Purrfect. Score Time.</h3>
+  			</div>
+  			<div class="panel-body">
+    			<h5 class="done" id="right"></h5>
+    			<h5 class="done" id="wrong"></h5>
+  			</div>
+		</div>
+	</div>
+</body>
+</html>

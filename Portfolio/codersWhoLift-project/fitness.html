@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fitness Application</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+	<!-- firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Moment.js link -->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<!-- Google Charts -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<link rel="stylesheet" href="assets/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap Javascript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</head>
+<body class="container">
+<!-- NAVBAR SECTION -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-left">
+		      <a class="navbar-brand" href="#">Coders Who Lift() !</a>
+	    </div>
+
+	   
+	      <form class="navbar-form navbar-right" role="search">
+
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="Login - Name" id='userID'>
+	        </div>
+	        <button type="submit" class="btn btn-default" id="login">Login</button>
+	        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Add New User</button>
+	      </form>
+
+	    </div>
+	  </div>
+
+	</nav>
+	<!-- END NAVBAR SECTION -->
+
+	<div>
+	<div class="row">
+		<div class="col-md-8">
+	<!-- THIS IS WHERE THE GRAPH WILL DISPLAY -->
+				<div id="stats">
+					<div id="curve_chart" style="width: 900px; height: 500px; margin-left:-50px; margin-top: -20px; ">
+						<div id="placeHolder">
+							<h1>Please Log In..</h1>
+							<h1>Or test the site with our demo account</h1>
+							<span><button type="button" id="demo" class="btn btn-primary btn-lg">  Demo  </button></span>
+						</div>
+						
+					</div>
+					
+				</div>
+
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default" style="padding: 25px; border-width: 3px">
+				<form>
+						<!-- INPUT AREA FOR EXERCISE INFORMATION -->
+							<div class="form-group">
+								  <label for="exercises">Exercise</label>
+								  <!-- on select or on change in javascript -->
+								  <select class="form-control" id="selectedExercise">
+								    <option value="squats" id="squats1">Squats</option>
+								    <option value="deadlifts" id="deadlifts1">Deadlifts</option>
+								    <option value="benchpress" id="benchpress1">Benchpress</option>
+								    <option value="militarypress" id="militarypress1">Military Press</option>
+								    <option value="rows" id="rows1">Bent Over Rows</option>
+								    <option value="crunches" id="crunches1">Crunches</option>
+								  </select>
+							</div>
+							<div class="form-group">
+							    <label for="startYear">Reps:</label>
+							    <input type="text" class="form-control" id="reps">
+							 </div>
+							 <div class="form-group">
+							    <label for="startYear">Sets:</label>
+							    <input type="text" class="form-control" id="sets">
+							 </div>
+							 <div class="form-group">
+							    <label for="startYear">Weight:</label>
+							    <input type="text" class="form-control" id="weight">
+							 </div>
+					  <br>
+					   <button type="submit" class="btn btn-default" id="addWorkout">Submit</button>
+					</form>
+			</div>
+		</div>
+	</div>
+	</div>
+<!-- BEGIN EXERCISE BUTTONS AREA -->
+	<style type="text/css">
+	#squats {
+		hover{
+			background: url(assets/images/squats2.jpg);
+		}
+	}
+	</style>
+	
+	<div class="panel panel-default" style="padding: 25px; border-width: 3px">
+		<div class="row">
+
+		<div class="col-md-2">
+			<img id="squats" class="video" src="assets/images/squats1.jpg" onmouseover="this.src='assets/images/squats2.jpg'" onmouseout="this.src='assets/images/squats1.jpg'" data-image="squatsmuscles" data-exercise="squats" data-id="111" data-playlist="PLLXmeIOBkPXQzuR2lT0lmW4d8ob0Hksuh" height="150px" width="150px">
+			<h3>Squats</h3>
+		</div>
+
+		<div class="col-md-2">
+			<img id="deadlifts" class="video" src="assets/images/deadlift1.jpg" onmouseover="this.src='assets/images/deadlift2.jpg'" onmouseout="this.src='assets/images/deadlift1.jpg'" data-image="deadmuscles" data-exercise="deadlifts" data-id="105" data-playlist="PLAAhLzp6GhQPGjJB_jrQl7mLqS1GpwFzH" height="150px" width="150px">
+			<h3>Dead Lifts</h3>
+		</div>
+
+		<div class="col-md-2">
+			<img id="benchpress" class="video" src="assets/images/benchpress1.jpg" onmouseover="this.src='assets/images/benchpress2.jpg'" onmouseout="this.src='assets/images/benchpress1.jpg'" data-image="benchmuscles" data-exercise="bench-press" data-id="192" data-playlist="PLhThNLPxjag-9w5xKC16XEE2wumjxZ_fC"  height="150px" width="150px">
+			<h3>Bench Press</h3>
+		</div>
+
+		<div class="col-md-2">
+			<img id="militarypress" class="video" src="assets/images/militarypress1.jpg" onmouseover="this.src='assets/images/militarypress2.jpg'" onmouseout="this.src='assets/images/militarypress1.jpg'" data-image="militarymuscles" data-exercise="military-press" data-id="229" data-playlist="PLDVeCN9VKxsuaPQrw8ry6zaqPR37ipNIx" height="150px" width="150px">
+			<h3>Military Press</h3>
+		</div>
+
+		<div class="col-md-2">
+			<img id="bentoverrows" class="video" src="assets/images/rows1.jpg" onmouseover="this.src='assets/images/rows2.jpg'" onmouseout="this.src='assets/images/rows1.jpg'" data-image="rowsmuscles" data-exercise="bent-over-rowing" data-id="109" data-playlist="PLB4F0A2F23028938E" height="150px" width="150px">
+			<h3>Bent-Over Rows</h3>
+		</div>
+
+		<div class="col-md-2">
+			<img id="crunches" class="video" src="assets/images/crunches1.jpg" onmouseover="this.src='assets/images/crunches2.jpg'" onmouseout="this.src='assets/images/crunches1.jpg'" data-image="crunchesmuscles" data-exercise="negative-crunches" data-id="93" data-playlist="PLsrpkrpNCXfooJPxbkCHIy8rnx6TZrMxR" height="150px" width="150px">
+			<h3>Negative Crunches</h3>
+		</div>
+
+
+		</div>
+	</div>
+<!-- END EXERCISE BUTTONS AREA -->
+<!-- THIS AREA CHANGES WHEN EXERCISE IS PRESSED -->
+	<div class="panel panel-default" style="padding: 25px; border-width: 3px">
+
+
+				<div class="row">
+				<!-- EXERCISE DESCRIPTION -->
+					<div class="description">
+						<h5>Make sure you have put the barbell at a height where you can comfortably take it out and put it back in. Take it out and make yourself ready: The bar is somewhat lower than your shoulders. The feet are quite apart and point out. The head is in your neck and looks up. The chest is out. Go now slowly down, till your thighs are parallel with the floor, not lower. The knees point outwards, your butt, out. Make a small pause of 1 second and with as much energy as you can, push the weight up. Make a pause of 2 seconds and repeat.</h5>
+					</div>
+				</div>
+				<!-- MUSCLE DIAGRAM -->
+				<div class="row" style="text-align: center">
+					<div class="col-md-6">
+						<div class="diagram" style="float:left">
+							<img src="assets/images/squatsmuscles.png" width="425px" height="350px">
+						</div>
+					</div>
+					<!-- YOUTUBE VIDEO DISPLAY AREA -->
+					<div class="col-md-6">
+						<div class="youtubeArea" style="margin-left: -100px">
+							<img src="https://d13yacurqjgara.cloudfront.net/users/34231/screenshots/283809/youtube-embed.png" width="450px" height="350px">
+						</div>
+					</div>
+				</div>
+
+
+	</div>
+
+	<nav class="navbar navbar-default navbar-static-bottom">
+  <div class="container">
+    <p style="text-align: center; color: white; padding-top: 15px">Copyright 2016 &copy; Jerome Carless, Neena Rinaldi, Jordan Biason</p>
+  </div>
+</nav>
+
+	 <!-- MODAL FOR LOGIN -->
+		<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Create New User</h4>
+	      </div>
+	      <div class="modal-body">
+	        <input type="text" class="form-control" placeholder="User Name" id='newUserName'>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" id="pushUserName" class="btn btn-default" data-dismiss="modal">Add User</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!-- END MODAL FOR LOGIN -->
+
+
+
+</body>
+</html>
+
+
+<script src="assets/javascript/javascript.js"></script>

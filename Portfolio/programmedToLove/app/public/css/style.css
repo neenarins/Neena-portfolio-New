@@ -1,0 +1,157 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+
+p {
+  line-height: 2rem;
+}
+
+h1 {
+    font-size: 4.2rem;
+    line-height: 0%;
+    margin: 2.1rem 0 1.68rem 0;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+nav .nav-wrapper {
+    position: relative;
+    width: initial;
+    height: 100%;
+}
+
+footer {
+  background-color: #FBB917;
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+.container ul {
+    padding-top: 15px;
+    padding-right: 4px;
+}
+
+.container h1 {
+    margin-top: 80px;
+}
+
+#bottom-half {
+    margin-top: -60px;
+}
+
+.parallax {
+    background-color: #FBB917;
+}
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -166px;
+}
+
+
+.row .col.s3 {
+    width: 20%;
+}
+
+.row .col.s6 {
+    width: 50%;
+}
+
+button, input, optgroup, select, textarea {
+    color: teal;
+    font: inherit;
+    margin: 0;
+}
+
+
+select.browser-default {
+    display: inline-block;
+}
+
+select {
+    background-color: white;
+    width: 38%;
+    padding: 5px;
+    border: 1px solid teal;
+    border-radius: 2px;
+    height: 2.5rem;
+}
+
+#waveContBtn {
+    position: absolute;
+}
+
+.container .row {
+    margin-left: -9.75rem;
+    margin-right: 6.25rem;
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 9px;
+}
+
+@media only screen and (min-width: 601px) {
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 64px;
+    line-height: 45px;
+}
+}
+
+@media only screen and (min-width: 601px) {
+  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 600px;
+}
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+
+  #logo {
+    font-size: 2.3em;
+  }
+
+  #bottom-half img {
+    max-width: 100%;
+  }
+
+}
+
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}

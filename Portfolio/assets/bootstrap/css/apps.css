@@ -1,0 +1,263 @@
+.page-header {
+	text-align: center;
+	color: white;
+}
+
+#instructions {
+	
+}
+.panel {
+	width: 500px;
+	height: 350px;
+	margin: auto;
+	
+}
+
+#stats {
+	width: 500px;
+	height: 250px;
+	text-align: center;
+}
+
+#word {
+	color: white;
+	
+}
+
+.textLeft{
+    text-align: left;
+}
+
+.htext{
+  margin-bottom:5px;
+  color:black
+}
+body11 {
+    background-color: #e6fff7;
+    
+}
+
+body1 {
+    background: url("../images/budha3.jpg");
+    background-size: 80px 60px;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+}
+.col1{
+display: inline-block;
+
+}
+.col2{
+display: inline-block;
+background-color:green
+}
+.hangman1 {
+    background: url("../images/budha4.PNG");
+    background-size: 80px 60px;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+}
+.imgBudha{
+  vertical-align:top;
+  float:left;
+  clear:right
+}
+.img{
+height:250px;
+width:130px;
+display:inline-block;
+float:left;
+
+
+}
+
+.inline{
+display: inline-block;
+float:right;
+clear:left
+}
+
+.panel-body1{
+padding:0px;
+background-color:jade
+}
+
+.appButtons{
+padding-top:10px;
+padding-left:30px;
+vertical-align: text-bottom;
+}
+
+.tableContainer{
+ display:table
+}
+.tableRow{
+display:table-row;
+
+}
+.columnApps{
+display: table-cell;
+padding:0px;
+margin:0px;
+background-color:#e6fff7;
+width:400px;
+
+}
+
+.columnApps2{
+display: table-cell;
+padding:1px;
+margin:1px;
+width:400px;
+
+}
+.butRight{
+float:right;
+margin-right:40px;
+
+}
+
+
+#about{
+margin-top:40px;
+border-top:5px;
+
+}
+
+.aboutMe{
+margin-top:15px;
+padding-top:80px;
+}
+
+.textAlignLeft{
+text-align:left;
+margin-left:0px;
+vertical-align:top;
+padding-left:15px;
+padding-top:10px;
+
+}
+
+.side-image-text{
+vertical-align:top;
+}
+
+.neenaImg{
+width:600px;
+padding-left:20px
+}
+.appText{
+font-size:40px;
+padding-left:90px;
+font-weight:bold;
+line-height:30px
+
+}
+.appText1{
+font-size:20px !important;
+font-weight:bold;
+line-height:5px;
+
+
+}
+
+
+.backgroundBuddha{
+  background: url("../images/buddha.jpg");
+    background-size: 400px ;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    width:400px;
+    height:250px;
+    background-color: #ADD1CF ;
+
+}
+.backgroundBuddhaColor{
+    background-color: #A4DDDD;
+     height:40px
+}
+
+
+.crystalBackground{
+background: url("../images/backgroundCrystal.jpg");
+    background-size: 400px ;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    width:400px;
+    height:250px;
+     background-color:#F5B88C
+    
+}
+.crystalBackgroundColor{
+
+     background-color:#F5B88C;
+     height:40px
+    
+}
+
+.backgroundCat{
+  background: url("../images/catBackground.jpg");   
+  background-size: 400px ;
+    padding-top: 40px;
+    width:400px;
+    height:250px;
+    background-color:#FFF1E6
+}
+.backgroundCatColor{
+     background-color:#FFF1E6;
+     height:40px    
+}
+
+.backgroundRobot{
+background: url("../images/old_robot1.gif");
+    background-size: 240px ;
+    background-position: 40px ;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    width:400px;
+    height:250px;
+    background-color: #BCD6D0 ;
+    
+}
+
+.backgroundRobotColor{
+     background-color:#F9DF98;
+     height:40px
+
+}
+
+.backgroundApprenticeship{
+background: url("../images/apprenticeship.png");
+    background-size: 380px ;
+    background-position: 10px ;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    width:400px;
+    height:250px;
+    background-color: black ;
+    
+}
+
+.backgroundApprenticeshipColor{
+     background-color:#D7D7E0;
+     height:40px
+
+}
+.backgroundFitness{
+background: url("../images/squats11.png");
+    background-size: 260px ;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    width:400px;
+    height:250px;
+     background-color:white ;
+}
+
+.backgroundFitnessColor{
+ background-color:white;
+ height:40px
+}
+
+.panel-heading{
+border-right:1px black
+}

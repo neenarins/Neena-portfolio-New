@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="assets/javascript/game.js" type="text/javascript"></script>
+	<title>Crystal Collector</title>
+</head>
+<body background="assets/images/background.jpg">
+	<div class="page-header">
+	  <h1>Crystal collector!
+	  	<small>
+	  	<br>A game of guesstimations. Simple now, addicting later.
+	  	</small>
+	  </h1>
+	</div>
+	<!-- <div class="jumbotron">
+		<h1>Crystal collector!</h1>
+		<p>A game of guesstimations. Simple now, addicting later.</p>
+	</div> -->
+	
+	<div class="panel panel-warning" id="instructions">
+	    <div class="panel-heading">
+	    	<h3 class="panel-title">Instructions</h3>
+	  	</div>
+		 <div class="panel-body">            
+            <div class="info">                      
+                At start of the game, a random number(Points to match), and 4 
+                crystals are displayed. 
+                Each crystal is assigned a unique number between 1-12, and 
+                is revealed only after you click first time on the 
+                crystal. Assigned numbers stay same during the entire game. 
+                <br>
+                <h4 class=h4Txt>How to play:</h4>
+                <li> click on any crystal.  Value of this crystal will be 
+                added to 'Your Points'.
+                <li> You win when your points match the 'Points to match'.
+                <li> You lose when your Points become greater than 
+                the 'Points to match'. 
+                  
+           </div>
+    	</div>
+	<br>
+	<div class="container">
+		<div class="panel panel-warning" id="given">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">Points to Match</h3>
+		  	</div>
+		  	<div class="panel-body" id="scoreToMeet">
+		  	</div>
+		</div>
+		<div class="panel panel-warning" id="points">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">Your Points</h3>
+		  	</div>
+		  	<div class="panel-body" id=scoreNow>
+		    	--
+		  	</div>
+		</div>
+		<div class="panel panel-warning" id="stats">
+		  	<div class="panel-heading">
+		    	<h3 class="panel-title">Stats</h3>
+		  	</div>
+		  	<div class="panel-body">
+		    	<span id="wins">Wins:  </span> || 
+		    	<span id="losses">Losses: </span>
+		  	</div>
+		</div>
+	</div>
+	
+	<div class="btn-group">
+		<button type="button" class="btn btn-default btn-lg" id="buttonReset">Play Again?</button>
+	</div>
+
+	<div class="panel panel-warning" id="gemRow">
+	  	<div class="panel-body1">
+		    <div class="row1">
+				<img src="assets/images/blue.jpg" class="gems" id="blueGem">
+				<img src="assets/images/green.jpg" class="gems" id="greenGem">		
+				<img src="assets/images/red.jpg" class="gems" id="redGem">			
+				<img src="assets/images/yellow.jpg" class="gems" id="yellowGem">			
+			</div>
+	  	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+html, body {
+    background-image: url(../img/bg.png);
+    
+	
+}
+
+#spacing{
+	margin-top: 50px;
+}
+
+.list-group-item{
+	margin-bottom: 100px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.panel-header{
+	color:#fff;
+	font-size: 24px;
+}
+
+#landing{
+	padding-top: 30px;
+	background-image: url(../img/astro.jpeg);
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+#buttonSpace{
+	padding-top: 20px;
+}
+
+#postingHead{
+	margin-top:10px;
+}
+
+#modalText{
+	font-size: 25px;
+}
+#logoText{
+	font-family: 'Oswald', sans-serif;
+	text-shadow: 3px 3px #a1a1a1;
+	font-size: 200px;
+	font-style: italic;
+	font-weight: 100px;
+	color: #fff;
+}
+
+#tagLine{
+	font-family: 'Oswald', sans-serif;
+	text-shadow: 2px 2px #a1a1a1;
+	font-size: 50px;
+	color: #fff;
+}
+
+#navBar{
+	background-color: #000;
+}
+
+#test{
+	font-size: 200px;
+	color: #fff;
+}
+
+#employerSignup {
+	background-color: black;
+}
+
+
+.signUpForm{
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 20px;
+	color: #fff;
+	clear: top;
+	margin-top: 10cm;
+	text-align: center;
+	width: 800px;
+	margin: auto;
+	padding-top: 1.5cm;
+}

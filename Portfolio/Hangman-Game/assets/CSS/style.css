@@ -1,0 +1,104 @@
+.container{
+margin-top:15px;
+text-align:center;
+height:800px;
+}
+
+.backgroundBuddha{
+ background:url("../images/buddha.jpg"); 
+ background-size:800px;
+ background-repeat: no-repeat;
+ 
+}
+
+.infoBudha{
+font-size:12px;
+padding-left:330px;
+margin-top:0px
+
+}
+.page-header{
+  margin-top:15px;
+  margin-bottom:-15px;
+  border:0px; 
+  text-align:left;
+  padding-left:300px;
+  color:black
+}
+
+h1 {
+	margin-top:-0px;
+	text-align:left;
+}
+
+#word {
+	color: green;		
+	margin-top:-2px;
+    margin-bottom:2px;
+    text-align:left;    	
+}
+
+#word h2 {
+	color: black;	
+    font-size:20px;
+    margin-bottom:0px;   
+    margin-left:310px
+    
+}
+
+.panel {
+	width: 500px;
+	height: 450px;
+	margin-left:420px
+}
+
+panel-body{
+    text-align: left;
+}
+
+
+#gameArea{
+padding-top:0px;
+padding-left:40px;
+margin-left:300px;
+color:white;
+font-size:24px;
+text-transform: uppercase;
+
+}
+
+
+#instructions {
+	text-align: center;
+}
+
+
+#stats {
+	width: 400px;
+	height: 280px;
+	margin-left:305px;
+	margin-top:0px;
+	text-align: left;
+}
+
+
+.textLeft{
+    text-align: left;
+}
+.wrong-guesses-hdr{
+margin-top:-15px;
+}
+
+#incorrectGuesses{
+color:red;
+font-size:16px;
+text-transform: uppercase;
+margin-bottom:10px;
+
+
+}
+
+.wins-hdr{
+margin-top:15px
+
+}

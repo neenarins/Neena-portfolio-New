@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class=" is-copy-enabled emoji-size-boost is-u2f-enabled">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-3c1694fab1568340f2e75b26efa1f55d97c5153364a7357e9e1104c718ff1a2f.css" integrity="sha256-PBaU+rFWg0Dy51sm76H1XZfFFTNkpzV+nhEExxj/Gi8=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-3e95d73eb454e0099947df00d91ab0dbfc6b10be69dd5daf5de7aeb676580d20.css" integrity="sha256-PpXXPrRU4AmZR98A2Rqw2/xrEL5p3V2vXeeutnZYDSA=" media="all" rel="stylesheet" />
+    <link rel="stylesheet" href="static/css/octicons/octicons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-c4b4365da282e51c06e107368db8502a2ecf82e64094d29d791b797372212de2.css" integrity="sha256-xLQ2XaKC5RwG4Qc2jbhQKi7PguZAlNKdeRt5c3IhLeI=" media="all" rel="stylesheet" />
+    <link as="script" href="https://assets-cdn.github.com/assets/github-723b665a2ff0acc9038f853f36908a2ab523595d75d4e0ded1d9138b5a7f5526.js" rel="preload" />
+    <link as="script" href="https://assets-cdn.github.com/assets/frameworks-f8175c23360b42a4eb18b2319fefeae252cfeea482fb804356f4136a52bfddb3.js" rel="preload" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+    <title>programmedToLove | Search</title>
+</head>
+<body>
+    <header class="site-header js-details-container" role="banner">
+        <div class="container-responsive">
+            
+        </div>
+            <div class="site-header-menu">
+                <nav class="site-header-nav site-header-nav-main">
+                    <a href="/profilepage" class="js-selected-navigation-item nav-item nav-item-personal" data-ga-click="Header, click, Nav menu - item:personal" data-selected-links="/personal /personal">
+                    Profile
+                    </a>
+                    <a id="alink" class="js-selected-navigation-item nav-item nav-item-business">Search 
+                    </a>
+                    <a href="/logout" class="js-selected-navigation-item nav-item nav-item-personal" data-ga-click="Header, click, Nav menu - item:personal" data-selected-links="/personal /personal">
+            Log Out</a>
+                </nav>
+            </div>
+    </header>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <!--Sidebar Filter -->
+            <h1>Match Me With A...</h1>
+            <input type="radio" name="gender" value="f"> Female<br>
+            <input type="radio" name="gender" value="m"> Male<br>
+            <input type="radio" name="gender" value="n"> Genderqueer/Non-Binary<br><br>
+            <input type="radio" name="dev" value="frontEnd"> Front-End<br>
+            <input type="radio" name="dev" value="backEnd"> Back-End<br>
+            <input type="radio" name="dev" value="fullStack"> Full Stack<br>
+            <h1>Developer</h1>
+            <a id="filter" class="btn btn-lg btn-primary"><span class="octicon octicon-clippy"></span> Filter</a>
+        </div>
+        <div id="userPanel" class="col-lg-3">
+
+
+    </div>
+</div>
+
+</body>
+
+<script>
+
+$(document).ready(function(){
+
+var preferences = {};
+
+var currentURL = window.location.origin;
+
+    $('#filter').on('click', function(){
+        $('#userPanel').empty();
+        var genderPref = $('input[name="gender"]:checked').val();
+        var devPref = $('input[name="dev"]:checked').val();
+
+        preferences = {
+            "sex": genderPref,
+            "dev": devPref
+        };    
+
+        console.log("Here are my preferences: ");
+        console.log(preferences.sex);
+        console.log(preferences.dev);
+        console.log("----------------------");      
+
+        console.log("Here are users that match that preference: ");
+
+        $.get(currentURL + '/api/users')
+            .done(function(data){
+                for(var i=0; i<data.length; i++){
+
+                    if (preferences.sex == data[i].sex && preferences.dev == data[i].dev){
+
+                        var matchPic=data[i].pic;
+                        var matchUserName=data[i].user_name;
+                        var matchAge=data[i].age;
+                        var matchGender=data[i].sex;
+                        var matchLocation=data[i].location;
+                        var matchDev=data[i].dev;
+
+                        console.log("The picture URL: " + data[i].pic);
+                        console.log("Username: " + data[i].user_name);
+                        console.log("Age: " + data[i].age);
+                        console.log("Gender: " + data[i].sex);
+                        console.log("Location: " + data[i].location);
+                        console.log("Developer Type: " + data[i].dev);
+
+                        // Generating the Match Panels
+                        var userPanel = $("<div>");
+                        userPanel.addClass('panel panel-default animated fadeIn');
+                        userPanel.attr('id', 'match-'+i);
+                        $('#userPanel').append(userPanel);
+
+
+                        // The match Image tag created
+                        var matchImage = $('<img>');
+                        matchImage.addClass('img-responsive center-block');
+                        matchImage.attr('src', matchPic);
+                        matchImage.css('width', '230px');
+                        matchImage.css('height', '230px');
+
+                        // Content pulled from our API, added to the div
+                        $('#match-'+i).html($(matchImage).fadeIn('slow'));
+                        $('#match-'+i).append('<h2 class="text-center">'+matchUserName+'</h2>');
+                        $('#match-'+i).append('<h3 class="text-center">'+matchAge+'/'+matchGender+'/'+matchLocation+'/'+matchDev+'</h3>');
+                        $('#match-'+i).append('<a href="#" class="btn btn-sm btn-primary"><span class="octicon octicon-person"></span> Send Pull Request</a>');
+                    }
+                }
+            })
+
+
+    });
+
+
+})
+
+
+
+
+</script>
+
+</html>
+
+                            
