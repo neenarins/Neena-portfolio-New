@@ -33,7 +33,7 @@
   color:black
 }
 body11 {
-    background-color: #e6fff7;
+    background-color: white;
     
 }
 
@@ -49,7 +49,7 @@ display: inline-block;
 }
 .col2{
 display: inline-block;
-background-color:green
+background-color:white;
 }
 .hangman1 {
     background: url("../images/budha4.PNG");
@@ -67,6 +67,8 @@ height:250px;
 width:130px;
 display:inline-block;
 float:left;
+
+
 }
 
 .inline{
@@ -77,16 +79,14 @@ clear:left
 
 .panel-body1{
 padding:0px;
-background-color:jade
+background-color: black;
 }
 
 .appButtons{
 padding-top:5px;
 font-size:bold;
 text-align:right;
-padding-right:45px;
-color:red;
-background-color:red
+padding-right:25px
 }
 
 .appButton{
@@ -95,26 +95,29 @@ font-weight:bold
 }
 
 .tableContainer{
- display:table;
+ display:table
 }
 .tableRow{
 display:table-row;
+
 }
 .columnApps{
 display: table-cell;
 padding:0px;
 margin:0px;
 background-color:black;
-width:600px;
+width:400px;
 border:1px solid black;
-height:400px;
+height:300px
+
+
 }
 
 .columnApps2{
 display: table-cell;
 padding:1px;
 margin:1px;
-width:500px;
+width:400px;
 
 }
 .butRight{
@@ -152,65 +155,90 @@ vertical-align:top;
 width:600px;
 padding-left:0px
 }
-.appText{
+.appHangText{
 font-size:40px;
 padding-left:90px;
 font-weight:bold;
-line-height:30px
+line-height:30px;
 
 }
+
+.appCatText{
+font-size:40px;
+padding-left:90px;
+font-weight:bold;
+line-height:30px;
+color: black;
+background-color: #fdf1e5;
+}
+
+.appFitText{
+font-size:40px;
+padding-top: 25px;
+padding-left:200px;
+font-weight:bold;
+line-height:30px;
+color: black;
+}
+
+.appCrystalText{
+  font-size:40px;
+padding-top: 25px;
+padding-left:200px;
+font-weight:bold;
+line-height:30px;
+color: black;
+}
+
+
 .appText1{
 font-size:20px !important;
 font-weight:bold;
 line-height:5px;
-
-
 }
 
 
 .backgroundBuddha{
   background: url("../images/buddha.jpg");
-    background-size: 400px ;
+    background-size: 420px ;
     background-repeat: no-repeat;
     padding-top: 40px;
-    width:400px;
+    width:360px;
     height:250px;
     background-color: #ADD1CF ;
 
 }
+
 .backgroundBuddhaColor{
-    background-color: #A4DDDD;
+    background-color: #909b78;
      height:40px
 }
 
 
-.crystalBackground{
+.backgroundCrystal{
 background: url("../images/backgroundCrystal.jpg");
-    background-size: 400px ;
+    background-size: 420px ;
     background-repeat: no-repeat;
     padding-top: 40px;
-    width:400px;
+    width:360px;
     height:250px;
-     background-color:#F5B88C
-    
+    background-color:#F5B88C;  
 }
-.crystalBackgroundColor{
-
-     background-color:#F5B88C;
-     height:40px
-    
+.backgroundCrystalcolor{
+     background-color:#df9cad;
+     height:40px    
 }
 
 .backgroundCat{
   background: url("../images/catBackground.jpg");   
-  background-size: 400px ;
+  background-size: 360px ;
     padding-top: 40px;
-    width:400px;
+    width:360px;
     height:250px;
     background-color:#FFF1E6
 }
 .backgroundCatColor{
-     background-color:#FFF1E6;
+     background-color:#bcada0;
      height:40px    
 }
 
@@ -220,32 +248,32 @@ background: url("../images/old_robot1.gif");
     background-position: 40px ;
     background-repeat: no-repeat;
     padding-top: 40px;
-    width:400px;
+    width:360px;
     height:250px;
     background-color: #BCD6D0 ;
     
 }
 
 .backgroundRobotColor{
-     background-color:#F9DF98;
+     background-color:#fbb917;
      height:40px
 
 }
 
 .backgroundApprenticeship{
 background: url("../images/apprenticeship.png");
-    background-size: 380px ;
+    background-size: 360px ;
     background-position: 10px ;
     background-repeat: no-repeat;
     padding-top: 40px;
-    width:400px;
+    width:360px;
     height:250px;
     background-color: black ;
     
 }
 
 .backgroundApprenticeshipColor{
-     background-color:#D7D7E0;
+     background-color: #727272;
      height:40px
 
 }
@@ -254,14 +282,15 @@ background: url("../images/squats11.png");
     background-size: 260px ;
     background-repeat: no-repeat;
     padding-top: 10px;
-    width:400px;
+    width:360px;
     height:250px;
      background-color:white ;
 }
 
 .backgroundFitnessColor{
  background-color:white;
- height:40px
+ height:40px;
+ border-top:1px solid black
 }
 
 .panel-heading{
@@ -271,4 +300,30 @@ border-right:1px black
 
 .imgCrystaldel{
 width:70px
+}
+
+
+.tableContainer1{
+width:360px;
+display:inline-block;
+padding-left:100px;
+border:1px solid red;
+background-color:black;
+
+}
+
+.columnApps1{
+width:364px;
+display:inline-block;
+border:2px solid black;
+background-color:white;
+height:345px;
+margin:-2px;
+border-radius:4px
+
+
+}
+
+.links{
+  color: #0077b5;
 }
