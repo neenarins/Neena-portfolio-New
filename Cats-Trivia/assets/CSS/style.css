@@ -1,25 +1,344 @@
-body {
-	background-repeat: repeat-y;
-	background-size: 1400px 1300px;
-}
-
-.jumbotron {
-	background-color: #ffcc99;
-	width: 560px;
-	height: 300px;
-	margin: auto;
+.page-header {
 	text-align: center;
-	padding: 4px;
-	border-radius: 15px;
-	margin-top: 1cm;
+	color: white;
 }
 
-.panel-default {
-	width: 10cm;
+#instructions {
+	
+}
+.panel {
+	width: 500px;
+	height: 350px;
 	margin: auto;
+	
 }
 
-#counter {
+#stats {
+	width: 500px;
+	height: 250px;
 	text-align: center;
 }
 
+#word {
+	color: white;
+	
+}
+
+.textLeft{
+    text-align: left;
+}
+
+.htext{
+  margin-bottom:5px;
+  color:black
+}
+body11 {
+    background-color: white;
+    
+}
+
+body1 {
+    background: url("../images/budha3.jpg");
+    background-size: 80px 60px;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+}
+.col1{
+display: inline-block;
+
+}
+.col2{
+display: inline-block;
+background-color:white;
+}
+.hangman1 {
+    background: url("../images/budha4.PNG");
+    background-size: 80px 60px;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+}
+.imgBudha{
+  vertical-align:top;
+  float:left;
+  clear:right
+}
+.img{
+height:250px;
+width:130px;
+display:inline-block;
+float:left;
+
+
+}
+
+.inline{
+display: inline-block;
+float:right;
+clear:left
+}
+
+.panel-body1{
+padding:0px;
+background-color: black;
+}
+
+.appButtons{
+padding-top:5px;
+font-size:bold;
+text-align:right;
+padding-right:25px
+}
+
+.appButton{
+padding-left:10px;
+font-weight:bold
+}
+
+.tableContainer{
+ display:table
+}
+.tableRow{
+display:table-row;
+
+}
+.columnApps{
+display: table-cell;
+padding:0px;
+margin:0px;
+background-color:black;
+width:400px;
+border:1px solid black;
+height:300px
+
+
+}
+
+.columnApps2{
+display: table-cell;
+padding:1px;
+margin:1px;
+width:400px;
+
+}
+.butRight{
+float:right;
+margin-right:40px;
+
+}
+
+
+#about{
+margin-top:40px;
+border-top:5px;
+
+}
+
+.aboutMe{
+margin-top:15px;
+padding-top:80px;
+}
+
+.textAlignLeft{
+text-align:left;
+margin-left:0px;
+vertical-align:top;
+padding-left:15px;
+padding-top:10px;
+
+}
+
+.side-image-text{
+vertical-align:top;
+}
+
+.neenaImg{
+width:600px;
+padding-left:0px
+}
+.appHangText{
+font-size:40px;
+padding-left:90px;
+font-weight:bold;
+line-height:30px;
+
+}
+
+.appCatText{
+font-size:40px;
+padding-left:90px;
+font-weight:bold;
+line-height:30px;
+background-color: #fdf1e5;
+margin-top:-5px;
+padding-bottom:22px;
+padding-top:5px
+}
+
+.appFitText{
+font-size:40px;
+padding-top: 25px;
+padding-left:200px;
+font-weight:bold;
+line-height:30px;
+color: black;
+}
+
+
+.appText1{
+font-size:20px !important;
+font-weight:bold;
+line-height:5px;
+}
+.appText2{
+font-size:30px !important;
+font-weight:bold;
+line-height:25px;
+margin-top:35px;
+text-align:center;
+padding-left:10px;
+vertial-align:center
+}
+.appText3{
+font-size:20px !important;
+font-weight:bold;
+line-height:30px;
+padding-left:70px
+}
+
+.backgroundBuddha{
+  background: url("../images/buddha.jpg");
+    background-size: 420px ;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    width:360px;
+    height:250px;
+    background-color: #ADD1CF ;
+
+}
+
+.backgroundBuddhaColor{
+    background-color: #909b78;
+     height:40px
+}
+
+
+.backgroundCrystal{
+background: url("../images/backgroundCrystal.jpg");
+    background-size: 420px ;
+    background-repeat: no-repeat;
+   
+    padding-top: 40px;
+    width:360px;
+    height:250px;
+    background-color:#F5B88C;  
+}
+
+.crystalImg{
+text-align:center;
+margin-left:200px;   
+    width:60px;
+    
+}
+.backgroundCrystalcolor{
+     background-color:#df9cad;
+     height:40px    
+}
+
+.backgroundCat{
+  background: url("../images/catBackground.jpg");   
+  background-size: 300px ;
+    padding-top: 40px;
+    width:360px;
+    height:250px;
+    
+}
+.backgroundCatColor{
+     background-color:#bcada0;
+     height:40px    
+}
+
+.backgroundRobot{
+background: url("../images/old_robot1.gif");
+    background-size: 240px ;
+    background-position: 40px ;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    width:360px;
+    height:250px;
+    background-color: #BCD6D0 ;
+    
+}
+
+.backgroundRobotColor{
+     background-color:#fbb917;
+     height:40px
+
+}
+
+.backgroundApprenticeship{
+background: url("../images/apprenticeship.png");
+    background-size: 360px ;
+    background-position: 10px ;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    width:360px;
+    height:250px;
+    background-color: black ;
+    
+}
+
+.backgroundApprenticeshipColor{
+     background-color: #A3A1A1;
+     height:40px
+
+}
+.backgroundFitness{
+background: url("../images/squats11.png");
+    background-size: 260px ;
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    width:360px;
+    height:250px;
+     background-color:white ;
+}
+
+.backgroundFitnessColor{
+ background-color:white;
+ height:40px;
+ border-top:1px solid black
+}
+
+.panel-heading{
+border-right:1px black
+}
+
+
+.imgCrystaldel{
+width:70px
+}
+
+
+.tableContainer1{
+width:360px;
+display:inline-block;
+padding-left:100px;
+border:1px solid red;
+background-color:black;
+
+}
+
+.columnApps1{
+width:364px;
+display:inline-block;
+border:2px solid black;
+background-color:white;
+height:345px;
+margin:-2px;
+border-radius:4px
+
+
+}
+
+.links{
+  color: #0077b5;
+}
