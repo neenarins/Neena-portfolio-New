@@ -205,6 +205,14 @@ line-height:30px;
 padding-left:70px
 }
 
+.appText4{
+font-size:22px !important;
+font-weight:bold;
+padding-top:90px;
+padding-left:170px;
+color:blaack
+}
+
 .backgroundBuddha{
   background: url("../images/buddha.jpg");
     background-size: 420px ;
@@ -293,13 +301,12 @@ background: url("../images/apprenticeship.png");
 
 }
 .backgroundFitness{
-background: url("../images/squats11.png");
-    background-size: 260px ;
-    background-repeat: no-repeat;
-    padding-top: 10px;
+background: url("../images/squats1.jpg");
+    background-size: 220px ;
+    background-repeat: no-repeat;   
     width:360px;
     height:250px;
-     background-color:white ;
+    background-color:white ;
 }
 
 .backgroundFitnessColor{
